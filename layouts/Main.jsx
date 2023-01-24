@@ -10,10 +10,13 @@ const Main = ({ children }) => (
           <Image src="/logo.svg" width={110} height={28} alt="پای‌شاپ" priority={1} />
         </Link>
         <div className="flex gap-x-2">
-          <button className="border border-gray-200 h-12 px-6 rounded-full flex items-center gap-2 hover:border-gray-300 hover:text-gray-600">
+          <Link
+            href="/cart"
+            className="border border-gray-200 h-12 px-6 rounded-full flex items-center gap-2 hover:border-gray-300 hover:text-gray-600"
+          >
             <RiShoppingBasket2Line className="w-5 h-5" />
             سبد خرید
-          </button>
+          </Link>
           <button className="border border-gray-200 w-12 h-12 rounded-full grid place-items-center hover:border-gray-300 hover:text-gray-600">
             <RiUser6Line className="w-5 h-5" />
           </button>

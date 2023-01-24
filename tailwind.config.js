@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
-  content: ["./pages/**/*.jsx", "./components/**/*.jsx"],
+  content: ["./pages/**/*.jsx", "./components/**/*.jsx", "./layouts/**/*.jsx"],
   theme: {
     extend: {
       fontFamily: {

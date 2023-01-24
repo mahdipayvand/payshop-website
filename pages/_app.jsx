@@ -1,5 +1,6 @@
 import "vazirmatn/Vazirmatn-font-face.css";
 import "styles/globals.css";
+import "swiper/css";
 
 import Head from "next/head";
 

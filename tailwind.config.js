@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
-  content: ["./pages/**/*.jsx"],
+  content: ["./pages/**/*.jsx", "./components/**/*.jsx"],
   theme: {
     extend: {
       fontFamily: {
@@ -10,6 +10,7 @@ const tailwindConfig = {
       },
     },
   },
+  plugins: [require("@tailwindcss/line-clamp")],
 };
 
 module.exports = tailwindConfig;

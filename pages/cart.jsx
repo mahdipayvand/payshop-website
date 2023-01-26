@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { CartItem } from "components";
+import { CartItem, Button } from "components";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const inCartProducts = [
@@ -52,7 +52,7 @@ const Cart = () => (
             </li>
           </ul>
           <hr className="border-gray-200 border-dashed" />
-          <button className="bg-violet-500 text-white h-12 rounded-full hover:bg-violet-600">ادامه</button>
+          <Button>ادامه</Button>
         </div>
         <div className="flex py-4 justify-between px-4 text-[12px]">
           <span className="font-medium">سود شما از خرید</span>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Button, Title } from "components";
 import { RiHeartLine, RiShoppingBasket2Line, RiArrowLeftSLine } from "react-icons/ri";
 
 const Product = () => (
@@ -13,10 +14,10 @@ const Product = () => (
           <button className="h-14 w-14 border rounded-full border-gray-200 hover:border-gray-300 grid place-items-center hover:text-gray-600">
             <RiHeartLine className="w-6 h-6" />
           </button>
-          <button className="bg-violet-500 h-14 flex items-center rounded-full text-white gap-x-2 hover:bg-violet-600 justify-center px-14">
+          <Button className="h-14">
             <RiShoppingBasket2Line className="w-6 h-6" />
             افزودن به سبد خرید
-          </button>
+          </Button>
         </div>
         <div className="flex h-24 border rounded-xl items-cente r justify-between p-6 bg-gray-100">
           <div className="flex flex-col gap-y-1">
@@ -49,10 +50,7 @@ const Product = () => (
     </div>
     <hr className="border-2 my-10" />
     <div className="flex flex-col gap-y-5">
-      <div className="flex flex-col gap-y-2">
-        <h3 className="text-lg text-gray-800">توضیحات</h3>
-        <div className="w-20 h-0.5 bg-violet-500"></div>
-      </div>
+      <Title className="text-gray-800">توضیحات</Title>
       <div className="leading-loose text-gray-700">
         سری A گوشی‌های هوشمند میان‌رده سامسونگ توانستند با بهره بردن از مشخصات فنی مناسب و البته قیمتی مقرون به‌صرفه،
         کاربران بسیاری را به سمت خودشان جلب کنند. یکی از این گوشی‌های میان‌رده با‌کیفیت و زیبا، سامسونگ Galaxy A13 است

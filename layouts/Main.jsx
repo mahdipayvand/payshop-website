@@ -17,9 +17,12 @@ const Main = ({ children }) => (
             <RiShoppingBasket2Line className="w-5 h-5" />
             سبد خرید
           </Link>
-          <button className="border border-gray-200 w-12 h-12 rounded-full grid place-items-center hover:border-gray-300 hover:text-gray-600">
+          <Link
+            href="/profile"
+            className="border border-gray-200 w-12 h-12 rounded-full grid place-items-center hover:border-gray-300 hover:text-gray-600"
+          >
             <RiUser6Line className="w-5 h-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </header>

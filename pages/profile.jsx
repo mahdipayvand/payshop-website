@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { Title, Input } from "components";
-import { RiUser6Line, RiHeartLine, RiLogoutCircleRLine } from "react-icons/ri";
+import { RiUser6Line, RiLogoutCircleRLine } from "react-icons/ri";
 
 const Profile = () => (
   <>
@@ -19,13 +19,6 @@ const Profile = () => (
           <Link href="#" className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] bg-violet-500 text-white">
             <RiUser6Line className="w-6 h-6" />
             مدیریت حساب
-          </Link>
-          <Link
-            href="#"
-            className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] hover:bg-gray-200 hover:text-gray-600"
-          >
-            <RiHeartLine className="w-6 h-6" />
-            محصولات موردعلاقه
           </Link>
           <button className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] hover:bg-gray-200 hover:text-gray-600">
             <RiLogoutCircleRLine className="w-6 h-6" />

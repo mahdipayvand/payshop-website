@@ -2,8 +2,10 @@ import "vazirmatn/Vazirmatn-font-face.css";
 import "styles/globals.css";
 import "swiper/css";
 
+import store from "store";
 import Head from "next/head";
 import { Main } from "layouts";
+import { Provider } from "react-redux";
 
 const MyApp = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => <Main>{page}</Main>);
@@ -13,7 +15,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <title>فروشگاه اینترنتی پای‌شاپ</title>
       </Head>
-      {getLayout(<Component {...pageProps} />)}
+      <Provider store={store}>{getLayout(<Component {...pageProps} />)}</Provider>
     </>
   );
 };

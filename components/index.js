@@ -5,5 +5,6 @@ import CartItem from "./CartItem";
 import Title from "./Title";
 import Input from "./Input";
 import Button from "./Button";
+import Price from "./Price";
 
-export { ProductItem, ProductsList, ProductsSection, CartItem, Title, Input, Button };
+export { ProductItem, ProductsList, ProductsSection, CartItem, Title, Input, Button, Price };

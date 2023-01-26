@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button, Title } from "components";
+import { Price, Button, Title } from "components";
 import { RiHeartLine, RiShoppingBasket2Line, RiArrowLeftSLine } from "react-icons/ri";
 
 const Product = () => (
@@ -11,13 +11,14 @@ const Product = () => (
           گوشی موبایل نوکیا مدل 105 - 2019 TA-1174 DS FA دو سیم کارت ظرفیت 4 مگابایت و رم 4 مگابایت
         </h1>
         <div className="flex gap-x-3">
-          <button className="h-14 w-14 border rounded-full border-gray-200 hover:border-gray-300 grid place-items-center hover:text-gray-600">
-            <RiHeartLine className="w-6 h-6" />
-          </button>
+          <Price className="ml-auto text-2xl">10000</Price>
           <Button className="h-14">
             <RiShoppingBasket2Line className="w-6 h-6" />
             افزودن به سبد خرید
           </Button>
+          <button className="h-14 w-14 border rounded-full border-gray-200 hover:border-gray-300 grid place-items-center hover:text-gray-600">
+            <RiHeartLine className="w-6 h-6" />
+          </button>
         </div>
         <div className="flex h-24 border rounded-xl items-cente r justify-between p-6 bg-gray-100">
           <div className="flex flex-col gap-y-1">

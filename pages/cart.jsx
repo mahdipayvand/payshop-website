@@ -1,22 +1,25 @@
 import Head from "next/head";
-import { CartItem, Button } from "components";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { CartItem, Button, Price } from "components";
 
 const inCartProducts = [
   {
     id: 1,
     image: "/products/1.jpg",
     title: "گوشی موبایل نوکیا مدل 105 - 2019 TA-1174 DS FA دو سیم کارت ظرفیت 4 مگابایت و رم 4 مگابایت",
+    price: 10000,
   },
   {
     id: 2,
     image: "/products/2.jpg",
     title: "گوشی موبایل شیائومی مدل Poco C40 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت- گلوبال",
+    price: 10000,
   },
   {
     id: 3,
     image: "/products/3.jpg",
     title: "گوشی موبایل شیائومی مدل Redmi Note 11 pro 4G دو سیم‌ کارت ظرفیت 128 گیگابایت و رم 8 گیگابایت",
+    price: 10000,
   },
 ];
 
@@ -44,11 +47,11 @@ const Cart = () => (
           <ul className="flex flex-col gap-y-3">
             <li className="flex justify-between text-gray-500">
               <span>قیمت کالاها (3)</span>
-              <span>0</span>
+              <Price>30000</Price>
             </li>
             <li className="flex justify-between text-gray-700 font-bold">
               <span>جمع سبد خرید</span>
-              <span>0</span>
+              <Price>30000</Price>
             </li>
           </ul>
           <hr className="border-gray-200 border-dashed" />
@@ -56,7 +59,7 @@ const Cart = () => (
         </div>
         <div className="flex py-4 justify-between px-4 text-[12px]">
           <span className="font-medium">سود شما از خرید</span>
-          <span className="font-bold">0</span>
+          <Price>0</Price>
         </div>
       </div>
     </div>

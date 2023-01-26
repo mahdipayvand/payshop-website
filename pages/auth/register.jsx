@@ -11,7 +11,7 @@ const Register = () => (
           <Input type="email" placeholder="ایمیل" className="col-span-full text-left placeholder:text-right" />
           <Input type="password" placeholder="رمز عبور" className="col-span-full text-left placeholder:text-right" />
         </div>
-        <Button className="h-14">ثبت نام</Button>
+        <Button>ثبت نام</Button>
       </form>
     </div>
   </div>

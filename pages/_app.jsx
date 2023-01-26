@@ -5,7 +5,7 @@ import "swiper/css";
 import Head from "next/head";
 import { Main } from "layouts";
 
-const MyApp = ({ Component, ...pageProps }) => {
+const MyApp = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => <Main>{page}</Main>);
 
   return (

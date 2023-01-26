@@ -55,7 +55,7 @@ const Cart = () => (
             </li>
           </ul>
           <hr className="border-gray-200 border-dashed" />
-          <Button>ادامه</Button>
+          <Button className="h-12">ادامه</Button>
         </div>
         <div className="flex py-4 justify-between px-4 text-[12px]">
           <span className="font-medium">سود شما از خرید</span>

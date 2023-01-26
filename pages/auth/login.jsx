@@ -9,7 +9,7 @@ const Login = () => (
           <Input type="email" placeholder="ایمیل" className="text-left placeholder:text-right" />
           <Input type="password" placeholder="رمز عبور" className="text-left placeholder:text-right" />
         </div>
-        <Button className="h-14">ورود</Button>
+        <Button>ورود</Button>
       </form>
     </div>
   </div>

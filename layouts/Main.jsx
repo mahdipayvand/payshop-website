@@ -4,7 +4,10 @@ import { useSelector } from "react-redux";
 import { RiShoppingBasket2Line, RiUser6Line } from "react-icons/ri";
 
 const Main = ({ children }) => {
-  const { totalItems } = useSelector((store) => store.cart);
+  const {
+    cart: { totalItems },
+    auth: { token },
+  } = useSelector((store) => store);
 
   return (
     <>
@@ -27,7 +30,7 @@ const Main = ({ children }) => {
               )}
             </Link>
             <Link
-              href="/auth/login"
+              href={token ? "/profile" : "/auth/login"}
               className="border border-gray-200 w-12 h-12 rounded-full grid place-items-center hover:border-gray-300 hover:text-gray-600"
             >
               <RiUser6Line className="w-5 h-5" />

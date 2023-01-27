@@ -6,5 +6,6 @@ import Title from "./Title";
 import Input from "./Input";
 import Button from "./Button";
 import Price from "./Price";
+import FormError from "./FormError";
 
-export { ProductItem, ProductsList, ProductsSection, CartItem, Title, Input, Button, Price };
+export { ProductItem, ProductsList, ProductsSection, CartItem, Title, Input, Button, Price, FormError };

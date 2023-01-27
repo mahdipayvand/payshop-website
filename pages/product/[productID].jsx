@@ -19,30 +19,6 @@ const Product = ({ product }) => {
               افزودن به سبد خرید
             </Button>
           </div>
-          <div className="flex h-24 border rounded-xl items-cente r justify-between p-6 bg-gray-100">
-            <div className="flex flex-col gap-y-1">
-              <p className="text-xs">در دسته‌بندی</p>
-              <h2 className="text-lg text-gray-600 font-medium">گوشی موبایل نوکیا</h2>
-            </div>
-            <button className="text-xs flex items-center gap-x-1 hover:text-violet-500">
-              دیگر محصولات
-              <RiArrowLeftSLine className="w-4 h-4" />
-            </button>
-          </div>
-          <ul className="flex flex-col divide-y">
-            <li className="py-2 text-[13px]">
-              <span className="w-1/3 inline-block">فناوری صفحه‌نمایش</span>
-              <strong>TFT</strong>
-            </li>
-            <li className="py-2 text-[13px]">
-              <span className="w-1/3 inline-block">اندازه</span>
-              <strong>1.7</strong>
-            </li>
-            <li className="py-2 text-[13px]">
-              <span className="w-1/3 inline-block">اقلام همراه</span>
-              <strong>اتری، دفترچه‌ راهنما، شارژر</strong>
-            </li>
-          </ul>
         </div>
         <div className="grid place-items-center h-[460px]">
           <Image src={process.env.NEXT_PUBLIC_API_URL + product?.image} width={300} height={300} alt={product?.title} />

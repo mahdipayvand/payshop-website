@@ -54,7 +54,7 @@ const Profile = () => {
             </Link>
             <a
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_ADMIN_PANEL_URL}?token=${token}`}
+              href={`${process.env.NEXT_PUBLIC_ADMIN_PANEL_URL}/product?token=${token}`}
               className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] hover:bg-gray-200 hover:text-gray-600"
             >
               <RiExternalLinkLine className="w-6 h-6" />

@@ -5,7 +5,7 @@ import { Title, Input } from "components";
 import { logout } from "store/slices/auth";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { RiUser6Line, RiLogoutCircleRLine } from "react-icons/ri";
+import { RiUser6Line, RiExternalLinkLine, RiLogoutCircleRLine } from "react-icons/ri";
 
 const Profile = () => {
   const router = useRouter();
@@ -52,6 +52,14 @@ const Profile = () => {
               <RiUser6Line className="w-6 h-6" />
               مدیریت حساب
             </Link>
+            <a
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_ADMIN_PANEL_URL}?token=${token}`}
+              className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] hover:bg-gray-200 hover:text-gray-600"
+            >
+              <RiExternalLinkLine className="w-6 h-6" />
+              ورود به پنل مدیریت
+            </a>
             <button
               onClick={() => dispatch(logout())}
               className="rounded-full py-4 flex px-6 gap-x-2 text-[13px] hover:bg-gray-200 hover:text-gray-600"
@@ -87,7 +95,7 @@ const Profile = () => {
                 type="email"
                 value={user?.email}
                 placeholder="ایمیل"
-                className="col-span-full text-left placeholder:text-right h-12 disabled:cursor-not-allowed"
+                className="col-span-full text-left placeholder:text-right h-12 disabled:cursor-not-allowed font-mono tracking-wide"
               />
             </form>
           </div>

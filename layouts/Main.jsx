@@ -13,9 +13,14 @@ const Main = ({ children }) => {
     <>
       <header className="h-[70px] border-b border-b-gray-200 px-5 lg:px-0">
         <div className="container mx-auto h-full flex items-center justify-between">
-          <Link href="/">
-            <Image src="/logo.svg" width={110} height={28} alt="پای‌شاپ" priority={1} />
-          </Link>
+          <div className="flex items-center gap-x-8">
+            <Link href="/">
+              <Image src="/logo.svg" width={110} height={28} alt="پای‌شاپ" priority={1} />
+            </Link>
+            <Link href="/" className="border-r border-r-gray-300 pr-8 hover:text-violet-500 hidden sm:block">
+              صفحه اصلی
+            </Link>
+          </div>
           <div className="flex gap-x-2">
             <Link
               href="/cart"

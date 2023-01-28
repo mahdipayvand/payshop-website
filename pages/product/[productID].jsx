@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addItem } from "store/slices/cart";
 import { Price, Button, Title } from "components";
-import { RiShoppingBasket2Line, RiArrowLeftSLine } from "react-icons/ri";
+import { RiShoppingBasket2Line } from "react-icons/ri";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();

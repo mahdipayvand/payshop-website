@@ -3,7 +3,7 @@ import { ProductsSection } from "components";
 const Home = ({ products }) => {
   return (
     <>
-      <section className="h-[410px] bg-violet-50 border-b border-b-gray-200 -mt-10 bg-[url(/hero.jpg)] bg-cover bg-blend-darken">
+      <section className="h-[410px] bg-violet-50 border-b border-b-gray-200 -mt-10 bg-[url(/hero.jpg)] bg-cover bg-blend-darken hidden lg:block">
         <div className="container mx-auto h-full flex items-center justify-between">
           <div className="flex flex-col gap-y-11">
             <div className="flex flex-col gap-y-8">

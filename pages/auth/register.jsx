@@ -19,14 +19,20 @@ const Register = () => {
         <title>ثبت نام | فروشگاه اینترنتی پای‌شاپ</title>
       </Head>
       <div className="grid place-items-center">
-        <div className="border p-10 rounded-2xl gap-y-8 flex flex-col w-2/6">
+        <div className="border p-10 rounded-2xl gap-y-8 flex flex-col w-full md:w-2/6">
           <Title className="text-gray-600">ثبت نام</Title>
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-8">
             <div className="grid grid-cols-2 gap-4">
-              <Input type="text" placeholder="نام" {...reg("firstName", { required: "نام رو وارد نکردی" })} />
+              <Input
+                type="text" 
+                placeholder="نام"
+                className="col-span-full sm:col-span-1"
+                {...reg("firstName", { required: "نام رو وارد نکردی" })}
+              />
               <Input
                 type="text"
                 placeholder="نام خانوادگی"
+                className="col-span-full sm:col-span-1"
                 {...reg("lastName", { required: "نام خانوادگی رو وارد نکردی" })}
               />
               {formState?.errors?.firstName && <FormError>{formState?.errors?.firstName?.message}</FormError>}

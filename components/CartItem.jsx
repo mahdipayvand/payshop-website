@@ -9,10 +9,16 @@ const CartItem = ({ quantity, product }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="p-4 flex items-stretch gap-x-2 bg-white">
-      <Image src={process.env.NEXT_PUBLIC_API_URL + product.image} width={100} height={100} alt={product.title} />
-      <div className="w-2/5 flex flex-col justify-between">
-        <h3 className="text-base line-clamp-2 font-medium">
+    <div className="p-4 flex items-stretch gap-x-2 bg-white flex-col sm:flex-row gap-y-6 sm:gap-y-0">
+      <Image
+        src={process.env.NEXT_PUBLIC_API_URL + product.image}
+        width={100}
+        height={100}
+        alt={product.title}
+        className="self-center sm:self-auto"
+      />
+      <div className="md:w-2/5 flex flex-col justify-between gap-y-2 sm:gap-y-0">
+        <h3 className="text-base sm:line-clamp-2 font-medium">
           <Link href={`/product/${product.id}`}>{product.title}</Link>
         </h3>
         <Price className="text-lg">{product.price}</Price>

@@ -11,7 +11,7 @@ const Main = ({ children }) => {
 
   return (
     <>
-      <header className="h-[70px] border-b border-b-gray-200">
+      <header className="h-[70px] border-b border-b-gray-200 px-5 lg:px-0">
         <div className="container mx-auto h-full flex items-center justify-between">
           <Link href="/">
             <Image src="/logo.svg" width={110} height={28} alt="پای‌شاپ" priority={1} />
@@ -38,7 +38,7 @@ const Main = ({ children }) => {
           </div>
         </div>
       </header>
-      <main className="py-10 flex flex-col gap-y-12">{children}</main>
+      <main className="py-10 flex flex-col gap-y-12 px-5 lg:px-0">{children}</main>
       <footer className="h-14 grid place-items-center border-t border-t-gray-200">
         <p className="text-gray-600 text-xs">
           تمامی حقوق برای <strong>پای‌شاپ</strong> محفوظ است.

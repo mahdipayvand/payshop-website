@@ -39,7 +39,7 @@ const Profile = () => {
         <title>حساب کاربری | فروشگاه اینترنتی پای‌شاپ</title>
       </Head>
       <div className="container mx-auto grid grid-cols-4 gap-x-6">
-        <div className="col-span-1 border-l border-l-gray-200 px-6 flex flex-col gap-y-6">
+        <div className="col-span-full lg:col-span-1 lg:border-l border-l-gray-200 px-6 flex flex-col gap-y-6">
           <div className="flex flex-col items-center gap-y-2 h-14 justify-center">
             <h2 className="text-lg font-medium">
               {user?.firstName} {user?.lastName}
@@ -69,7 +69,8 @@ const Profile = () => {
             </button>
           </div>
         </div>
-        <div className="col-span-3 h-[200px] flex flex-col gap-y-6">
+        <hr className="my-10 col-span-full lg:hidden" />
+        <div className="col-span-full lg:col-span-3 h-[200px] flex flex-col gap-y-6 mb-10 lg:mb-0">
           <div className="h-14">
             <Title>مدیریت حساب</Title>
           </div>

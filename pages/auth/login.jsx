@@ -27,7 +27,7 @@ const Login = () => {
         <title>ورود | فروشگاه اینترنتی پای‌شاپ</title>
       </Head>
       <div className="grid place-items-center gap-y-8">
-        <div className="border p-10 rounded-2xl gap-y-8 flex flex-col w-2/6">
+        <div className="border p-10 rounded-2xl gap-y-8 flex flex-col w-full md:w-2/6">
           <Title className="text-gray-600">ورود</Title>
           <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-8">
             <div className="flex flex-col gap-y-4">

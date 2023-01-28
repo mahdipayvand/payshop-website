@@ -16,8 +16,8 @@ const Cart = () => {
         <title>سبد خرید | فروشگاه اینترنتی پای‌شاپ</title>
       </Head>
       {items.length > 0 ? (
-        <div className="container mx-auto grid grid-cols-7 gap-x-8">
-          <div className="col-span-5 border border-gray-200 rounded-xl bg-gray-200 h-min">
+        <div className="container mx-auto grid grid-cols-7 gap-8">
+          <div className="col-span-full lg:col-span-5 border border-gray-200 rounded-xl bg-gray-200 h-min">
             <div className="flex justify-between items-center p-2">
               <h2 className="text-base indent-2 font-medium">سبد خرید</h2>
               <button
@@ -33,7 +33,7 @@ const Cart = () => {
               ))}
             </ul>
           </div>
-          <div className="col-span-2 border border-gray-200 rounded-xl bg-gray-200 h-min">
+          <div className="col-span-full lg:col-span-2 border border-gray-200 rounded-xl bg-gray-200 h-min">
             <div className="bg-white rounded-xl flex flex-col p-4 gap-y-4">
               <ul className="flex flex-col gap-y-3">
                 <li className="flex justify-between text-gray-500">

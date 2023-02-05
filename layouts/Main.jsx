@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { RiShoppingBasket2Line, RiUser6Line } from "react-icons/ri";
 
 const Main = ({ children }) => {
+  const router = useRouter();
   const {
     cart: { totalItems },
     auth: { token },
@@ -17,7 +19,12 @@ const Main = ({ children }) => {
             <Link href="/">
               <Image src="/logo.svg" width={110} height={28} alt="پای‌شاپ" priority={1} />
             </Link>
-            <Link href="/" className="border-r border-r-gray-300 pr-8 hover:text-violet-500 hidden sm:block">
+            <Link
+              href="/"
+              className={`border-r border-r-gray-300 pr-8 hover:text-violet-500 hidden sm:block after:absolute after:h-1 after:bg-violet-500 relative after:w-[calc(theme(width.full)_-_theme(padding.8))] after:-bottom-6 after:right-8 after:rounded-t-lg ${
+                router.pathname == "/home" ? "text-violet-500" : "after:hidden"
+              }`}
+            >
               صفحه اصلی
             </Link>
           </div>

@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { removeItems } from "store/slices/cart";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { CartItem, Button, Price } from "components";

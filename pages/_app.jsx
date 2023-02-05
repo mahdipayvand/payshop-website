@@ -10,33 +10,31 @@ import store, { persistor } from "store";
 import { ToastContainer } from "react-toastify";
 import { PersistGate } from "redux-persist/integration/react";
 
-const MyApp = ({ Component, pageProps }) => {
-  const getLayout = Component.getLayout || ((page) => <Main>{page}</Main>);
-
-  return (
-    <>
-      <Head>
-        <title>فروشگاه اینترنتی پای‌شاپ</title>
-      </Head>
-      <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <ToastContainer
-            draggable
-            rtl={true}
-            pauseOnHover
-            closeOnClick
-            theme="colored"
-            autoClose={5000}
-            pauseOnFocusLoss
-            newestOnTop={true}
-            position="bottom-left"
-            hideProgressBar={true}
-          />
-          {getLayout(<Component {...pageProps} />)}
-        </PersistGate>
-      </Provider>
-    </>
-  );
-};
+const MyApp = ({ Component, pageProps }) => (
+  <>
+    <Head>
+      <title>فروشگاه اینترنتی پای‌شاپ</title>
+    </Head>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <ToastContainer
+          draggable
+          rtl={true}
+          pauseOnHover
+          closeOnClick
+          theme="colored"
+          autoClose={5000}
+          pauseOnFocusLoss
+          newestOnTop={true}
+          position="bottom-left"
+          hideProgressBar={true}
+        />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
+      </PersistGate>
+    </Provider>
+  </>
+);
 
 export default MyApp;

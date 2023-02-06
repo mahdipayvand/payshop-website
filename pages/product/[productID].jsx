@@ -2,8 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { addItem } from "store/slices/cart";
-import { Price, Button, Title } from "components";
 import { RiShoppingBasket2Line } from "react-icons/ri";
+import { Price, Button, Title, DiscountPercentage } from "components";
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
@@ -20,7 +20,19 @@ const Product = ({ product }) => {
           <div className="flex flex-col gap-y-10 order-2 lg:order-1">
             <h1 className="text-xl font-medium text-gray-700 leading-relaxed">{product?.title}</h1>
             <div className="flex gap-x-3 flex-col gap-y-8 md:gap-y-0 md:flex-row">
-              <Price className="ml-auto text-2xl">{product?.price}</Price>
+              {product?.discount ? (
+                <div className="flex flex-1 items-baseline gap-x-4">
+                  <div className="flex flex-col">
+                    <Price className="ml-auto text-2xl">{product?.price - product?.discount}</Price>
+                    <Price hideCurrency className="ml-auto text-lg line-through text-gray-400 font-light">
+                      {product?.price}
+                    </Price>
+                  </div>
+                  <DiscountPercentage price={product?.price} discount={product?.discount} />
+                </div>
+              ) : (
+                <Price className="ml-auto text-2xl">{product?.price}</Price>
+              )}
               <Button onClick={() => dispatch(addItem(product))}>
                 <RiShoppingBasket2Line className="w-6 h-6" />
                 افزودن به سبد خرید

@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const { items, totalItems, totalPrice } = useSelector((store) => store.cart);
+  const { items, totalItems, itemsPrice, totalPrice } = useSelector((store) => store.cart);
 
   return (
     <>
@@ -37,7 +37,7 @@ const Cart = () => {
               <ul className="flex flex-col gap-y-3">
                 <li className="flex justify-between text-gray-500">
                   <span>قیمت کالاها ({totalItems})</span>
-                  <Price>{totalPrice}</Price>
+                  <Price>{itemsPrice}</Price>
                 </li>
                 <li className="flex justify-between text-gray-700 font-bold">
                   <span>جمع سبد خرید</span>
@@ -49,7 +49,7 @@ const Cart = () => {
             </div>
             <div className="flex py-4 justify-between px-4 text-[12px]">
               <span className="font-medium">سود شما از خرید</span>
-              <Price>0</Price>
+              <Price>{itemsPrice - totalPrice}</Price>
             </div>
           </div>
         </div>

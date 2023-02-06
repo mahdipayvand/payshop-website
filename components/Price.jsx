@@ -1,7 +1,7 @@
-const Price = ({ children, className }) => (
+const Price = ({ children, hideCurrency, className }) => (
   <p className={`font-bold flex items-center gap-x-2 text-gray-600 text-base ${className}`}>
     {Number(children).toLocaleString("fa-IR")}
-    <span className="font-normal text-xs">تومان</span>
+    {!hideCurrency && <span className="font-normal text-xs">تومان</span>}
   </p>
 );
 

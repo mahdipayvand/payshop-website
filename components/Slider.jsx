@@ -14,9 +14,9 @@ const Slider = ({ slides }) => (
         <SwiperSlide key={slide.id}>
           <Image
             width={1440}
-            height={320}
-            className="w-full h-[180px] md:h-[320px]"
+            height={360}
             src={process.env.NEXT_PUBLIC_API_URL + slide.image}
+            className="w-full h-[210px] md:h-[360px] object-cover"
           />
         </SwiperSlide>
       ))}
